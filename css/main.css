@@ -24,6 +24,17 @@ ol, ul{
   align-items: center;
 }
 
+.wrap{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.wrap:nth-child(2){
+  margin-bottom: 25px;
+}
+
+
 .wrapper-title{
   font-family: Verdana, sans-serif;
   font-weight: bold;
@@ -37,7 +48,6 @@ ol, ul{
   font-weight: normal;
   font-size: 24px;
   line-height: 45px;
-  margin-bottom: 25px;
   transition: all .5s ease-in-out;
   transform: translateX(200%); 
 }
@@ -95,7 +105,7 @@ ol, ul{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: 8px solid #CFCECE;
   border-radius: 10px;
-  margin-bottom: 200px;
+  margin-bottom: 180px;
 }
 
 .firstValue, .secondValue{
@@ -132,7 +142,7 @@ ol, ul{
 
 .next-page{
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
@@ -143,12 +153,12 @@ ol, ul{
   transition: transform .6s ease-out;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 
 .next-page-title{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 54px;
-  margin-right: 10px;
   text-align: center;
 }
 

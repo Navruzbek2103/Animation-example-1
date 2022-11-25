@@ -1,6 +1,10 @@
 let violetCircle = 10;
 let yellowCircle = 3;
 let stringNum = String(violetCircle + yellowCircle);
+let finish = new Audio("./../audio/finish.ogg")
+let title = new Audio("./../audio/title.ogg")
+let text = new Audio("./../audio/text.ogg")
+
 function viewCircle(){
   setTimeout(() => {
     $(".wrapper-title").style.transform = 'translateX(0)'
@@ -17,7 +21,14 @@ function viewCircle(){
   }
 }
 viewCircle()
-let audio = new Audio("./../audio/finish.ogg")
+$(".wrapper").addEventListener("click", (e) => {
+  if(e.target.classList.contains("wrapper-title-img") && e.target.id === "title-img"){
+    title.play()
+  }
+  if(e.target.classList.contains("wrapper-title-img") && e.target.id === "text-img"){
+    text.play()
+  }
+})
 function calculateExample(){
   let enterNum = 0;
   $(".btn-group").addEventListener("click", (e)=>{
@@ -42,7 +53,7 @@ function calculateExample(){
     if(enterNum == 2){
       $(".wrapper").style.transform = "translateX(-200%)";
       $(".wrapper").style.transition = "transform .7s ease-in";
-      audio.play();
+      finish.play();
       $(".next-page").style.transform = "translateX(0)";
     }
   })
