@@ -15,6 +15,26 @@ ol, ul{
   list-style: none;
 }
 
+.spinner{
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 11;
+}
+
+.hide-spinner{
+  display: none;
+}
+
+.spinner-img{
+  width: 10%;
+}
+
 .wrapper{
   max-width: 960px;
   height: 540px;
